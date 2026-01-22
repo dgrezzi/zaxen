@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaxen - Data Integrity by Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white">
+    <!-- Navbar -->
+    <nav class="fixed w-full top-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 border-2 border-blue-400 rounded-full flex items-center justify-center">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-bold">Zaxen</span>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#home" class="text-blue-400 hover:text-blue-300 transition">Home</a>
+                    <a href="#services" class="text-slate-300 hover:text-white transition">Services</a>
+                    <a href="#about" class="text-slate-300 hover:text-white transition">About Us</a>
+                    <a href="#insights" class="text-slate-300 hover:text-white transition">Insights</a>
+                    <a href="#contact" class="text-slate-300 hover:text-white transition">Contact</a>
+                </div>
+                
+                <a href="#contact" class="hidden md:block px-6 py-2.5 border border-blue-400 text-blue-400 rounded hover:bg-blue-400 hover:text-slate-900 transition font-medium">
+                    Request Consultation
+                </a>
+                
+                <button id="menu-btn" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col gap-4">
+                    <a href="#home" class="text-blue-400">Home</a>
+                    <a href="#services" class="text-slate-300">Services</a>
+                    <a href="#about" class="text-slate-300">About Us</a>
+                    <a href="#insights" class="text-slate-300">Insights</a>
+                    <a href="#contact" class="text-slate-300">Contact</a>
+                    <a href="#contact" class="px-6 py-2.5 border border-blue-400 text-blue-400 rounded text-center">Request Consultation</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Home -->
+    <section
+        id="home"
+        class="relative min-h-screen flex items-center bg-cover bg-center pt-20"
+        style="background-image: url('/bg.png');"
+    >
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-slate-900/75"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                    Data Integrity<br>by Design
+                </h1>
+                <p class="text-xl md:text-2xl text-blue-400 mb-8">
+                    Pharmaceutical Data Governance<br>& Compliance Consultancy
+                </p>
+                <a href="#contact" class="inline-block px-8 py-4 bg-blue-600 text-white rounded hover:bg-blue-700 transition font-semibold text-lg">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4">Our Services</h2>
+            <p class="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
+                Comprehensive solutions for pharmaceutical data integrity and compliance
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-900 p-8 rounded-lg border border-slate-700 hover:border-blue-600 transition">
+                    <div class="w-14 h-14 bg-blue-600/20 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Data Governance</h3>
+                    <p class="text-slate-400">Strategic frameworks and policies to ensure data quality, security, and regulatory compliance across your organization.</p>
+                </div>
+                
+                <div class="bg-slate-900 p-8 rounded-lg border border-slate-700 hover:border-blue-600 transition">
+                    <div class="w-14 h-14 bg-blue-600/20 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Compliance Audits</h3>
+                    <p class="text-slate-400">Thorough assessments and gap analyses to identify risks and ensure adherence to FDA, EMA, and global regulations.</p>
+                </div>
+                
+                <div class="bg-slate-900 p-8 rounded-lg border border-slate-700 hover:border-blue-600 transition">
+                    <div class="w-14 h-14 bg-blue-600/20 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">System Validation</h3>
+                    <p class="text-slate-400">Expert validation services for computerized systems ensuring data integrity throughout the product lifecycle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-8">About Us</h2>
+                <p class="text-lg text-slate-300 leading-relaxed">
+                    Zaxen is a leading pharmaceutical data governance consultancy dedicated to helping organizations achieve and maintain regulatory compliance. Our team of experts brings decades of industry experience to deliver tailored solutions that protect data integrity and accelerate your path to market.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights Section -->
+    <section id="insights" class="py-20 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12">Insights</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-slate-900 p-6 rounded-lg border border-slate-700">
+                    <span class="text-blue-400 text-sm">Industry Trends</span>
+                    <h3 class="text-xl font-semibold mt-2 mb-3">The Future of Data Integrity in Pharma</h3>
+                    <p class="text-slate-400 text-sm">Exploring emerging technologies and regulatory expectations shaping the industry.</p>
+                </div>
+                <div class="bg-slate-900 p-6 rounded-lg border border-slate-700">
+                    <span class="text-blue-400 text-sm">Best Practices</span>
+                    <h3 class="text-xl font-semibold mt-2 mb-3">Building a Culture of Compliance</h3>
+                    <p class="text-slate-400 text-sm">Strategies for embedding data integrity principles throughout your organization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4">Contact Us</h2>
+            <p class="text-slate-400 text-center mb-12">Get in touch to discuss your data governance needs</p>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-slate-800 p-8 rounded-lg border border-slate-700">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-slate-900 border border-slate-600 rounded focus:outline-none focus:border-blue-600 transition" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-slate-900 border border-slate-600 rounded focus:outline-none focus:border-blue-600 transition" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 bg-slate-900 border border-slate-600 rounded focus:outline-none focus:border-blue-600 transition resize-none" placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-blue-600 text-white rounded hover:bg-blue-700 transition font-semibold">
+                            Send Message
+                        </button>
+                    </form>
+                    
+                    <div class="mt-8 pt-8 border-t border-slate-700 text-center">
+                        <p class="text-slate-400">Or call us directly:</p>
+                        <a href="tel:0112353730" class="text-2xl font-semibold text-blue-400 hover:text-blue-300 transition">(011) 235-3730</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 border-2 border-blue-400 rounded-full flex items-center justify-center">
+                        <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <span class="text-lg font-bold">Zaxen</span>
+                </div>
+                <p class="text-slate-400 text-sm">&copy; 2026 Zaxen. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
