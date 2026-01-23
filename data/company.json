@@ -1,0 +1,118 @@
+{
+  "site": {
+    "name": "Zaxen",
+    "tagline": "Integridade de Dados por Design"
+  },
+  
+  "hero": {
+    "title": "Integridade de Dados por Design",
+    "subtitle": "Consultoria em Governança de Dados e Conformidade Farmacêutica",
+    "cta": "Solicitar Consultoria",
+    "buttonText": "Começar Agora",
+    "backgroundImage": "/bg.png"
+  },
+
+  "about": {
+    "title": "Sobre Nós",
+    "text": "A Zaxen é uma consultoria especializada em integridade, governança e conformidade regulatória de dados para o setor farmacêutico. Apoiamos laboratórios e organizações de ciências da vida no design de ecossistemas de dados preparados para inspeção, alinhados com ALCOA+, GxP e expectativas regulatórias globais.",
+    "mission": "Ajudar organizações reguladas a estruturar, fortalecer e sustentar seus processos de governança e integridade de dados por meio de diagnósticos claros, processos estruturados, indicadores confiáveis e preparação sólida para auditorias regulatórias.",
+    "vision": "Ser referência técnica em governança e integridade de dados no ambiente GMP, apoiando laboratórios e organizações reguladas a tomarem decisões baseadas em dados confiáveis, rastreáveis e auditáveis.",
+    "values": [
+      "Integridade Técnica",
+      "Rastreabilidade e Clareza",
+      "Independência e Ética",
+      "Simplicidade Aplicável",
+      "Desenvolvimento de Pessoas",
+      "Foco em Resultado Sustentável"
+    ]
+  },
+
+  "services": {
+    "title": "Nossos Serviços",
+    "subtitle": "Soluções completas para integridade de dados e conformidade farmacêutica",
+    "items": [
+      {
+        "title": "Governança de Dados",
+        "description": "Estruturas e políticas estratégicas para garantir integridade, rastreabilidade e conformidade em todo o ciclo de vida dos dados.",
+        "icon": "shield"
+      },
+      {
+        "title": "Auditorias de Conformidade",
+        "description": "Análise de lacunas e auditorias independentes focadas em riscos de integridade de dados, sistemas computadorizados e processos laboratoriais.",
+        "icon": "clipboard"
+      },
+      {
+        "title": "Diagnóstico de Integridade",
+        "description": "Avaliação do estado atual de integridade e governança de dados GMP com base em ALCOA++ e ICH Q9.",
+        "icon": "search"
+      },
+      {
+        "title": "Indicadores & Suporte à Decisão",
+        "description": "Estruturação de indicadores confiáveis baseados em dados íntegros e governados para decisões gerenciais e de qualidade.",
+        "icon": "trending-up"
+      }
+    ]
+  },
+
+  "insights": {
+    "title": "Insights",
+    "subtitle": "Tendências e melhores práticas em integridade de dados farmacêuticos",
+    "items": [
+      {
+        "category": "Tendências do Setor",
+        "title": "O Futuro da Integridade de Dados na Indústria Farmacêutica",
+        "summary": "Como as agências regulatórias estão fortalecendo as expectativas em torno da governança e integridade de dados.",
+        "readTime": "5 min"
+      },
+      {
+        "category": "Melhores Práticas",
+        "title": "Construindo uma Cultura de Conformidade",
+        "summary": "Incorporando princípios de integridade de dados nos sistemas de qualidade e na cultura organizacional.",
+        "readTime": "7 min"
+      },
+      {
+        "category": "Metodologia",
+        "title": "Aplicando o ICH Q9 na Gestão de Riscos de Dados",
+        "summary": "Abordagem estruturada para avaliação de risco em processos de dados dentro de ambientes GMP.",
+        "readTime": "6 min"
+      }
+    ]
+  },
+
+  "sharedData": {
+    "contact": {
+      "email": "contato@zaxen.com",
+      "phone": "+55 (11) 91667-7423",
+      "address": "São Paulo, Brasil",
+      "availability": "Segunda–Sexta, 9h–18h"
+    },
+    
+    "companyInfo": {
+      "name": "Zaxen Consultoria em Dados Farmacêuticos Ltda.",
+      "cnpj": "12.345.678/0001-90",
+      "address": "Rua das Acácias, 123 - São Paulo, SP - CEP: 01234-567"
+    },
+    
+    "social": {
+      "linkedin": "https://linkedin.com/in/grezzi",
+      "twitter": "#",
+      "instagram": "#",
+      "youtube": "#"
+    }
+  },
+
+  "footer": {
+    "copyright": "© 2026 Zaxen. Todos os direitos reservados.",
+    "tagline": "Integridade de Dados por Design"
+  },
+
+  "navigation": {
+    "links": [
+      {"text": "Início", "href": "#home", "isActive": true},
+      {"text": "Serviços", "href": "#services", "isActive": false},
+      {"text": "Sobre Nós", "href": "#about", "isActive": false},
+      {"text": "Insights", "href": "#insights", "isActive": false},
+      {"text": "Contato", "href": "#contact", "isActive": false}
+    ]
+  }
+}
