@@ -25,23 +25,32 @@ async function loadSiteData() {
 // Função principal para popular a página
 function populatePage(data) {
   // NOME DO SITE
-  document.title = `${data.site.name} - ${data.site.tagline}`;
-  document.querySelector('nav .text-2xl.font-bold').textContent = data.site.name;
-  
-  // HERO
-  const hero = data.hero;
-  document.getElementById("hero-title").innerHTML = 
-    hero.title.replace(" ", "<br>");
-  document.getElementById("hero-subtitle").textContent = hero.subtitle;
-  document.getElementById("hero-cta").textContent = hero.cta;
-  
+  if (data.site) {
+    document.title = `${data.site.name} - ${data.site.tagline}`;
+    const navBrand = document.querySelector('nav .text-2xl.font-bold');
+    if (navBrand) navBrand.textContent = data.site.name;
+  }
+
+  // HERO (seguro para páginas que não possuem hero)
+  const hero = data.hero || null;
+  const heroTitleEl = document.getElementById("hero-title");
+  if (hero && heroTitleEl && hero.title) {
+    heroTitleEl.innerHTML = hero.title.replace(" ", "<br>");
+  }
+  const heroSubtitleEl = document.getElementById("hero-subtitle");
+  if (hero && heroSubtitleEl && hero.subtitle) heroSubtitleEl.textContent = hero.subtitle;
+  const heroCtaEl = document.getElementById("hero-cta");
+  if (hero && heroCtaEl && hero.cta) heroCtaEl.textContent = hero.cta;
   const heroSection = document.getElementById("home");
-  if (hero.backgroundImage) {
+  if (heroSection && hero && hero.backgroundImage) {
     heroSection.style.backgroundImage = `url('${hero.backgroundImage}')`;
   }
-  
-  // SOBRE
-  document.getElementById("about-text").textContent = data.about.text;
+
+  // SOBRE (seguro caso a página não tenha seção sobre)
+  const aboutTextEl = document.getElementById("about-text");
+  if (aboutTextEl && data.about && data.about.text) {
+    aboutTextEl.textContent = data.about.text;
+  }
   
   // SERVIÇOS
   const servicesSection = document.getElementById("services");
@@ -78,34 +87,56 @@ function populatePage(data) {
     }
   }
   
-  // DADOS COMPARTILHÁVEIS (CONTATO)
-  if (data.sharedData && data.sharedData.contact) {
-    const contact = data.sharedData.contact;
-    
-    // Atualiza seção de contato na página principal
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      const contactInfo = document.createElement('div');
-      contactInfo.className = 'text-center mt-8 space-y-4';
-      contactInfo.innerHTML = `
-        <div class="space-y-2">
-          <p class="text-slate-300"><span class="font-medium">Email:</span> ${contact.email}</p>
-          <p class="text-slate-300"><span class="font-medium">Telefone:</span> ${contact.phone}</p>
-        </div>
-        <div class="pt-4 border-t border-slate-800">
-          <p class="text-slate-400 text-sm">${contact.address}</p>
-          <p class="text-slate-400 text-sm mt-1">${contact.availability}</p>
-        </div>
-      `;
-      contactSection.querySelector('.max-w-2xl').appendChild(contactInfo);
+  // DADOS COMPARTILHÁVEIS (CONTATO) — atualiza tanto a página principal quanto páginas legais
+  if (data.sharedData) {
+    if (data.sharedData.contact) {
+      const contact = data.sharedData.contact;
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        const contactInfo = document.createElement('div');
+        contactInfo.className = 'text-center mt-8 space-y-4';
+        contactInfo.innerHTML = `
+          <div class="space-y-2">
+            <p class="text-slate-300"><span class="font-medium">E-mail:</span> ${contact.email}</p>
+            <p class="text-slate-300"><span class="font-medium">Telefone:</span> ${contact.phone}</p>
+          </div>
+          <div class="pt-4 border-t border-slate-800">
+            <p class="text-slate-400 text-sm">${contact.address}</p>
+            <p class="text-slate-400 text-sm mt-1">${contact.availability}</p>
+          </div>
+        `;
+        const target = contactSection.querySelector('.max-w-2xl') || contactSection;
+        target.appendChild(contactInfo);
+      }
+
+      // Se houver campos explícitos em páginas legais, atualiza
+      const emailEl = document.getElementById('contact-email'); if (emailEl) emailEl.textContent = data.sharedData.contact.email || emailEl.textContent;
+      const privacyEmailEl = document.getElementById('privacy-contact-email'); if (privacyEmailEl) privacyEmailEl.textContent = data.sharedData.contact.email || privacyEmailEl.textContent;
+      const phoneEl = document.getElementById('contact-phone'); if (phoneEl) phoneEl.textContent = data.sharedData.contact.phone || phoneEl.textContent;
+    }
+
+    if (data.sharedData.companyInfo) {
+      const ci = data.sharedData.companyInfo;
+      const nameEl = document.getElementById('company-name'); if (nameEl) nameEl.textContent = ci.name || nameEl.textContent;
+      const cnpjEl = document.getElementById('company-cnpj'); if (cnpjEl) cnpjEl.textContent = ci.cnpj || cnpjEl.textContent;
+      const addrEl = document.getElementById('company-address'); if (addrEl) addrEl.textContent = ci.address || addrEl.textContent;
+    }
+    // Document meta (última atualização / versão) — procura em sharedData.meta
+    const meta = (data.sharedData && data.sharedData.meta) || data.meta || (data.footer && data.footer.meta);
+    if (meta) {
+      const lastEl = document.getElementById('doc-last-updated'); if (lastEl && meta.lastUpdated) lastEl.textContent = meta.lastUpdated;
+      const verEl = document.getElementById('doc-version'); if (verEl && meta.version) verEl.textContent = meta.version;
     }
   }
   
   // RODAPÉ
   const footer = document.querySelector('footer');
   if (footer && data.footer) {
-    document.getElementById("footer-text").textContent = data.footer.copyright;
-    
+    const footerTextEl = document.getElementById("footer-text");
+    if (footerTextEl) footerTextEl.textContent = data.footer.copyright || footerTextEl.textContent;
+    const footerTaglineEl = document.getElementById("footer-tagline");
+    if (footerTaglineEl) footerTaglineEl.textContent = data.footer.tagline || footerTaglineEl.textContent;
+
     // LINKS PARA PÁGINAS LEGAIS - FIXADO
     const legalLinksContainer = document.createElement('div');
     legalLinksContainer.className = 'mt-6 flex flex-wrap justify-center gap-4 md:gap-6';
@@ -115,7 +146,7 @@ function populatePage(data) {
       <a href="legal.html" class="text-slate-400 hover:text-white text-sm transition">Aviso Legal</a>
     `;
     footer.appendChild(legalLinksContainer);
-    
+
     // Adiciona redes sociais se existirem
     if (data.sharedData && data.sharedData.social) {
       const socialContainer = document.createElement('div');
@@ -129,12 +160,6 @@ function populatePage(data) {
       ).join('');
       footer.appendChild(socialContainer);
     }
-    
-    // Adiciona tagline
-    const tagline = document.createElement('p');
-    tagline.className = 'mt-6 text-slate-500 text-sm';
-    tagline.textContent = data.footer.tagline;
-    footer.appendChild(tagline);
   }
 }
 

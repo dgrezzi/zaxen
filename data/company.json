@@ -81,7 +81,7 @@
 
   "sharedData": {
     "contact": {
-      "email": "contato@zaxen.com",
+      "email": "contato@zaxen.com.br",
       "phone": "+55 (11) 91667-7423",
       "address": "São Paulo, Brasil",
       "availability": "Segunda–Sexta, 9h–18h"
@@ -90,7 +90,7 @@
     "companyInfo": {
       "name": "Zaxen Consultoria em Dados Farmacêuticos Ltda.",
       "cnpj": "12.345.678/0001-90",
-      "address": "Rua das Acácias, 123 - São Paulo, SP - CEP: 01234-567"
+      "address": "Rua Imaginária, 123 - São Paulo, SP - CEP: 01234-567"
     },
     
     "social": {
@@ -98,6 +98,11 @@
       "twitter": "#",
       "instagram": "#",
       "youtube": "#"
+    }
+    ,
+    "meta": {
+      "lastUpdated": "15 de janeiro de 2024",
+      "version": "2.1"
     }
   },
 
