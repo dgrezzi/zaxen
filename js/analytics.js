@@ -13,6 +13,7 @@
 
   // Injeta Umami em produção
   const script = document.createElement('script');
+  script.async = true;
   script.defer = true;
   script.src = 'https://cloud.umami.is/script.js';
   script.setAttribute('data-website-id', 'e28a930e-2c0a-4665-b527-0bd660700381');
