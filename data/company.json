@@ -93,13 +93,13 @@
       "address": "Rua Imaginária, 123 - São Paulo, SP - CEP: 01234-567"
     },
     
-    "social": {
-      "linkedin": "https://linkedin.com/in/grezzi",
-      "twitter": "#",
-      "instagram": "#",
-      "youtube": "#"
-    }
-    ,
+    "social": [
+      {"platform": "linkedin", "url": "https://linkedin.com/in/grezzi", "active": true},
+      {"platform": "x", "url": "#", "active": false},
+      {"platform": "instagram", "url": "#", "active": false},
+      {"platform": "youtube", "url": "#", "active": false}
+    ],
+
     "meta": {
       "lastUpdated": "24 de janeiro de 2026",
       "version": "1.1"

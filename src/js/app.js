@@ -148,16 +148,18 @@ function populatePage(data) {
     footer.appendChild(legalLinksContainer);
 
     // Adiciona redes sociais se existirem
-    if (data.sharedData && data.sharedData.social) {
+    if (data.sharedData && data.sharedData.social && Array.isArray(data.sharedData.social)) {
       const socialContainer = document.createElement('div');
       socialContainer.className = 'mt-6 flex justify-center gap-4';
-      socialContainer.innerHTML = Object.entries(data.sharedData.social).map(([platform, url]) => 
-        `<a href="${url}" target="_blank" rel="noopener noreferrer" 
-           class="text-slate-400 hover:text-blue-400 transition transform hover:scale-110">
-          <span class="sr-only">${platform}</span>
-          ${IconHelper.getSocialIcon(platform)}
-        </a>`
-      ).join('');
+      socialContainer.innerHTML = data.sharedData.social
+        .filter(social => social.active !== false) // Filtra os que têm active: false
+        .map(social => 
+          `<a href="${social.url}" target="_blank" rel="noopener noreferrer" 
+             class="text-slate-400 hover:text-blue-400 transition transform hover:scale-110">
+            <span class="sr-only">${social.platform}</span>
+            ${IconHelper.getSocialIcon(social.platform)}
+          </a>`
+        ).join('');
       footer.appendChild(socialContainer);
     }
   }
