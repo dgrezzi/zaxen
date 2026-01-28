@@ -14,12 +14,16 @@
 
 /* Estilos base */
 * {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     box-sizing: border-box;
 }
 
 body.bg-gradient {
-    background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-light) 100%);
+    background: linear-gradient(
+        135deg,
+        var(--color-bg-dark) 0%,
+        var(--color-bg-light) 100%
+    );
     min-height: 100vh;
     color: var(--color-text-light);
 }
@@ -283,7 +287,9 @@ body.bg-gradient {
 .submit-button:hover:not(:disabled) {
     background: linear-gradient(to right, #2563eb, #1d4ed8);
     transform: translateY(-1px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow:
+        0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .submit-button:disabled {
@@ -311,8 +317,12 @@ body.bg-gradient {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Form Assurance */
@@ -422,7 +432,7 @@ body.bg-gradient {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     .link-divider {
         display: none;
     }

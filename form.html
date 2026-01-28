@@ -1,210 +1,340 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaxen - Fale com Nossos Especialistas</title>
-    
-    <!-- CSS Local -->
-    <link rel="stylesheet" href="src/styles/style.css">
-    <link rel="stylesheet" href="src/styles/form.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Umami Analytics -->
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="e28a930e-2c0a-4665-b527-0bd660700381"></script>
-</head>
-<body class="bg-gradient">
-    
-    <!-- Navbar Simples -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-content">
-                <a href="index.html" class="logo-group">
-                    <div class="logo-icon">
-                        <svg class="logo-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                        </svg>
-                    </div>
-                    <span class="logo-text">Zaxen</span>
-                </a>
-                <a href="index.html" class="back-link">
-                    ← Voltar ao site
-                </a>
-            </div>
-        </div>
-    </nav>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Zaxen - Fale com Nossos Especialistas</title>
 
-    <!-- Form Container -->
-    <div class="form-page-container">
-        <div class="form-wrapper">
-            
-            <!-- Header -->
-            <div class="form-header">
-                <div class="form-icon-container">
-                    <svg class="form-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                              d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
-                    </svg>
+        <!-- CSS Local -->
+        <link rel="stylesheet" href="src/styles/style.css" />
+        <link rel="stylesheet" href="src/styles/form.css" />
+
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Umami Analytics -->
+        <script
+            defer
+            src="https://cloud.umami.is/script.js"
+            data-website-id="e28a930e-2c0a-4665-b527-0bd660700381"
+        ></script>
+    </head>
+    <body class="bg-gradient">
+        <!-- Navbar Simples -->
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-content">
+                    <a href="index.html" class="logo-group">
+                        <div class="logo-icon">
+                            <svg
+                                class="logo-svg"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                                />
+                            </svg>
+                        </div>
+                        <span class="logo-text">Zaxen</span>
+                    </a>
+                    <a href="index.html" class="back-link">
+                        ← Voltar ao site
+                    </a>
                 </div>
-                <h1 class="form-title">
-                    Fale com nossos <span class="text-accent">especialistas</span>
-                </h1>
-                <p class="form-subtitle">
-                    Preencha os campos abaixo e entraremos em contato em até 24h
-                </p>
             </div>
+        </nav>
 
-            <!-- Message Container -->
-            <div id="message" class="message-container hidden"></div>
-
-            <!-- Form -->
-            <div class="form-card">
-                <form id="leadForm" class="form-content">
-                    
-                    <!-- Nome -->
-                    <div class="form-group">
-                        <label for="name" class="form-label">
-                            Nome Completo *
-                        </label>
-                        <input type="text" id="name" name="name" required
-                               class="form-input"
-                               placeholder="Como gostaria de ser chamado">
-                    </div>
-
-                    <!-- Email -->
-                    <div class="form-group">
-                        <label for="email" class="form-label">
-                            E-mail Profissional *
-                        </label>
-                        <input type="email" id="email" name="email" required
-                               class="form-input"
-                               placeholder="seunome@empresa.com">
-                    </div>
-
-                    <!-- Telefone -->
-                    <div class="form-group">
-                        <label for="phone" class="form-label">
-                            Telefone / WhatsApp *
-                        </label>
-                        <input type="tel" id="phone" name="phone" required
-                               class="form-input"
-                               placeholder="(11) 99999-9999">
-                    </div>
-
-                    <!-- Empresa -->
-                    <div class="form-group">
-                        <label for="company" class="form-label">
-                            Empresa *
-                        </label>
-                        <input type="text" id="company" name="company" required
-                               class="form-input"
-                               placeholder="Nome da sua empresa">
-                    </div>
-
-                    <!-- Setor -->
-                    <div class="form-group">
-                        <label for="sector" class="form-label">
-                            Setor *
-                        </label>
-                        <select id="sector" name="sector" required class="form-select">
-                            <option value="" disabled selected>Selecione seu setor</option>
-                            <option value="farmaceutico">Farmacêutico</option>
-                            <option value="biotech">Biotecnologia</option>
-                            <option value="medicos">Dispositivos Médicos</option>
-                            <option value="cosmeticos">Cosméticos</option>
-                            <option value="alimentos">Alimentos e Bebidas</option>
-                            <option value="quimica">Química</option>
-                            <option value="outro">Outro</option>
-                        </select>
-                    </div>
-
-                    <!-- O que está buscando -->
-                    <div class="form-group">
-                        <label for="need" class="form-label">
-                            O que você está buscando? *
-                        </label>
-                        <select id="need" name="need" required class="form-select">
-                            <option value="" disabled selected>Selecione uma opção</option>
-                            <option value="consultoria">Consultoria em Integridade de Dados</option>
-                            <option value="diagnostico">Diagnóstico ALCOA+</option>
-                            <option value="auditoria">Preparação para Auditoria</option>
-                            <option value="treinamento">Treinamento GxP</option>
-                            <option value="implementacao">Implementação de Sistema</option>
-                            <option value="orcamento">Solicitar Orçamento</option>
-                            <option value="duvida">Tirar Dúvida</option>
-                            <option value="outro">Outro</option>
-                        </select>
-                    </div>
-
-                    <!-- Campo de Observações (NOVO) -->
-                    <div class="form-group">
-                        <label for="observations" class="form-label">
-                            Observações / Dúvida Específica
-                        </label>
-                        <textarea id="observations" name="observations" 
-                                  class="form-textarea"
-                                  placeholder="Descreva sua dúvida ou necessidade específica..."></textarea>
-                        <p class="form-hint">Opcional - máximo 500 caracteres</p>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <button type="submit" class="submit-button">
-                        <svg id="submit-icon" class="submit-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                  d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        <!-- Form Container -->
+        <div class="form-page-container">
+            <div class="form-wrapper">
+                <!-- Header -->
+                <div class="form-header">
+                    <div class="form-icon-container">
+                        <svg
+                            class="form-icon"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
+                            />
                         </svg>
-                        <span id="submit-text">Enviar solicitação</span>
-                        <div id="loading-spinner" class="loading-spinner hidden"></div>
-                    </button>
-
-                    <!-- Assurance -->
-                    <p class="form-assurance">
-                        <svg class="assurance-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-                        </svg>
-                        Seus dados estão seguros. Sem spam.
+                    </div>
+                    <h1 class="form-title">
+                        Fale com nossos
+                        <span class="text-accent">especialistas</span>
+                    </h1>
+                    <p class="form-subtitle">
+                        Preencha os campos abaixo e entraremos em contato em até
+                        24h
                     </p>
-                </form>
-            </div>
+                </div>
 
-            <!-- Contact Info -->
-            <div class="contact-info">
-                <p class="contact-text">Prefere falar direto?</p>
-                <div class="contact-links">
-                    <a href="mailto:contato@zaxen.com" class="contact-link">
-                        <svg class="link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                  d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
-                        contato@zaxen.com
-                    </a>
-                    <span class="link-divider">•</span>
-                    <a href="tel:+5511999999999" class="contact-link">
-                        <svg class="link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                        </svg>
-                        +55 (11) 99999-9999
-                    </a>
+                <!-- Message Container -->
+                <div id="message" class="message-container hidden"></div>
+
+                <!-- Form -->
+                <div class="form-card">
+                    <form id="leadForm" class="form-content">
+                        <!-- Nome -->
+                        <div class="form-group">
+                            <label for="name" class="form-label">
+                                Nome Completo *
+                            </label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                                class="form-input"
+                                placeholder="Como gostaria de ser chamado"
+                            />
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                E-mail Profissional *
+                            </label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                class="form-input"
+                                placeholder="seunome@empresa.com"
+                            />
+                        </div>
+
+                        <!-- Telefone -->
+                        <div class="form-group">
+                            <label for="phone" class="form-label">
+                                Telefone / WhatsApp *
+                            </label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                required
+                                class="form-input"
+                                placeholder="(11) 99999-9999"
+                            />
+                        </div>
+
+                        <!-- Empresa -->
+                        <div class="form-group">
+                            <label for="company" class="form-label">
+                                Empresa *
+                            </label>
+                            <input
+                                type="text"
+                                id="company"
+                                name="company"
+                                required
+                                class="form-input"
+                                placeholder="Nome da sua empresa"
+                            />
+                        </div>
+
+                        <!-- Setor -->
+                        <div class="form-group">
+                            <label for="sector" class="form-label">
+                                Setor *
+                            </label>
+                            <select
+                                id="sector"
+                                name="sector"
+                                required
+                                class="form-select"
+                            >
+                                <option value="" disabled selected>
+                                    Selecione seu setor
+                                </option>
+                                <option value="farmaceutico">
+                                    Farmacêutico
+                                </option>
+                                <option value="biotech">Biotecnologia</option>
+                                <option value="medicos">
+                                    Dispositivos Médicos
+                                </option>
+                                <option value="cosmeticos">Cosméticos</option>
+                                <option value="alimentos">
+                                    Alimentos e Bebidas
+                                </option>
+                                <option value="quimica">Química</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <!-- O que está buscando -->
+                        <div class="form-group">
+                            <label for="need" class="form-label">
+                                O que você está buscando? *
+                            </label>
+                            <select
+                                id="need"
+                                name="need"
+                                required
+                                class="form-select"
+                            >
+                                <option value="" disabled selected>
+                                    Selecione uma opção
+                                </option>
+                                <option value="consultoria">
+                                    Consultoria em Integridade de Dados
+                                </option>
+                                <option value="diagnostico">
+                                    Diagnóstico ALCOA+
+                                </option>
+                                <option value="auditoria">
+                                    Preparação para Auditoria
+                                </option>
+                                <option value="treinamento">
+                                    Treinamento GxP
+                                </option>
+                                <option value="implementacao">
+                                    Implementação de Sistema
+                                </option>
+                                <option value="orcamento">
+                                    Solicitar Orçamento
+                                </option>
+                                <option value="duvida">Tirar Dúvida</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <!-- Campo de Observações (NOVO) -->
+                        <div class="form-group">
+                            <label for="observations" class="form-label">
+                                Observações / Dúvida Específica
+                            </label>
+                            <textarea
+                                id="observations"
+                                name="observations"
+                                class="form-textarea"
+                                placeholder="Descreva sua dúvida ou necessidade específica..."
+                            ></textarea>
+                            <p class="form-hint">
+                                Opcional - máximo 500 caracteres
+                            </p>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-button">
+                            <svg
+                                id="submit-icon"
+                                class="submit-icon"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                />
+                            </svg>
+                            <span id="submit-text">Enviar solicitação</span>
+                            <div
+                                id="loading-spinner"
+                                class="loading-spinner hidden"
+                            ></div>
+                        </button>
+
+                        <!-- Assurance -->
+                        <p class="form-assurance">
+                            <svg
+                                class="assurance-icon"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                                />
+                            </svg>
+                            Seus dados estão seguros. Sem spam.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <p class="contact-text">Prefere falar direto?</p>
+                    <div class="contact-links">
+                        <!-- EMAIL -->
+                        <a
+                            id="contact-email-link"
+                            href="mailto:"
+                            class="contact-link"
+                        >
+                            <svg
+                                class="link-icon"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                />
+                            </svg>
+                            <!-- vazio por padrão -->
+                            <span id="contact-email"></span>
+                        </a>
+                        <span class="link-divider">•</span>
+
+                        <!-- TELEFONE -->
+                        <a
+                            id="contact-phone-link"
+                            href="tel:"
+                            class="contact-link"
+                        >
+                            <svg
+                                class="link-icon"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                />
+                            </svg>
+                            <!-- vazio por padrão -->
+                            <span id="contact-phone"></span>
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <!-- Back to site -->
-            <div class="back-to-site">
-                <a href="index.html" class="back-link-main">
-                    <svg class="back-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
-                    </svg>
-                    Voltar para a página principal
-                </a>
-            </div>
         </div>
-    </div>
 
-    <!-- JavaScript Local -->
-    <script src="src/js/form.js"></script>
-</body>
+        <!-- ================= RODAPÉ ================= -->
+        <div class="h-8 md:h-10"></div>
+        <footer class="py-8 bg-slate-900 border-t border-slate-800 text-center">
+            <p id="footer-text" class="text-slate-400 text-sm"></p>
+        </footer>
+        <!-- JavaScript Local -->
+        <script src="src/js/form.js"></script>
+        <script src="src/js/app.js"></script>
+    </body>
 </html>
