@@ -48,7 +48,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const text = await response.text();
 
-      if (text.includes('OK')) {
+    if (text.includes('OK')) {
+
+      // 🔥 Evento de conversão no Umami
+      if (window.umami) {
+        umami.track('lead_converted', {
+          form: 'contato',
+          sector: formData.get('sector'),
+          need: formData.get('need')
+        });
+      }
+
         showMessage(
           '✅ Obrigado! Recebemos sua solicitação e entraremos em contato em breve.',
           'success'
