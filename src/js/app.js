@@ -113,6 +113,7 @@ function populatePage(data) {
       const emailEl = document.getElementById('contact-email'); if (emailEl) emailEl.textContent = data.sharedData.contact.email || emailEl.textContent;
       const privacyEmailEl = document.getElementById('privacy-contact-email'); if (privacyEmailEl) privacyEmailEl.textContent = data.sharedData.contact.email || privacyEmailEl.textContent;
       const phoneEl = document.getElementById('contact-phone'); if (phoneEl) phoneEl.textContent = data.sharedData.contact.phone || phoneEl.textContent;
+      const availabilityEl = document.getElementById('availability'); if (availabilityEl) availabilityEl.textContent = data.sharedData.contact.availability || availabilityEl.textContent;
     }
 
     if (data.sharedData.companyInfo) {
@@ -259,6 +260,7 @@ function showErrorState() {
     if (el) el.textContent = "Falha ao carregar conteúdo. Por favor, atualize a página.";
   });
 }
+
 
 // Inicializa quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', loadSiteData);

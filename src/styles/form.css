@@ -1,0 +1,429 @@
+/* Estilos específicos para o formulário */
+:root {
+    --color-bg-dark: #0f172a;
+    --color-bg-light: #1e293b;
+    --color-primary: #3b82f6;
+    --color-primary-dark: #2563eb;
+    --color-text-light: #f1f5f9;
+    --color-text-muted: #94a3b8;
+    --color-border: #334155;
+    --color-success: #10b981;
+    --color-error: #ef4444;
+    --color-warning: #f59e0b;
+}
+
+/* Estilos base */
+* {
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+body.bg-gradient {
+    background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-light) 100%);
+    min-height: 100vh;
+    color: var(--color-text-light);
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 50;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.navbar-container {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.logo-group:hover {
+    opacity: 0.9;
+}
+
+.logo-icon {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid #60a5fa;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s ease;
+}
+
+.logo-group:hover .logo-icon {
+    border-color: #93c5fd;
+}
+
+.logo-svg {
+    width: 1rem;
+    height: 1rem;
+    color: #60a5fa;
+    transition: color 0.3s ease;
+}
+
+.logo-group:hover .logo-svg {
+    color: #93c5fd;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.back-link {
+    color: #cbd5e1;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: white;
+}
+
+/* Form Container */
+.form-page-container {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.form-wrapper {
+    max-width: 28rem;
+    margin: 0 auto;
+}
+
+/* Form Header */
+.form-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.form-icon-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 9999px;
+    margin-bottom: 1.5rem;
+}
+
+.form-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    color: #60a5fa;
+}
+
+.form-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.text-accent {
+    color: #60a5fa;
+}
+
+.form-subtitle {
+    color: var(--color-text-muted);
+}
+
+/* Message Container */
+.message-container {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid;
+}
+
+.message-container.success {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: #10b981;
+    color: #10b981;
+}
+
+.message-container.error {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: #ef4444;
+    color: #ef4444;
+}
+
+.message-container.info {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: #3b82f6;
+    color: #3b82f6;
+}
+
+.message-container.hidden {
+    display: none;
+}
+
+/* Form Card */
+.form-card {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(4px);
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.form-card:hover {
+    transform: translateY(-2px);
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Form Elements */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #cbd5e1;
+    margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: #0f172a;
+    border: 1px solid #475569;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #64748b;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+.form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+}
+
+.form-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-hint {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 0.25rem;
+}
+
+/* Submit Button */
+.submit-button {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to right, #3b82f6, #2563eb);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    position: relative;
+}
+
+.submit-button:hover:not(:disabled) {
+    background: linear-gradient(to right, #2563eb, #1d4ed8);
+    transform: translateY(-1px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.submit-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.submit-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.submit-button:hover .submit-icon {
+    transform: scale(1.1);
+}
+
+.loading-spinner {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid white;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Form Assurance */
+.form-assurance {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #64748b;
+    padding-top: 1rem;
+    border-top: 1px solid #475569;
+}
+
+.assurance-icon {
+    display: inline;
+    width: 1rem;
+    height: 1rem;
+    color: #60a5fa;
+    margin-right: 0.25rem;
+    vertical-align: middle;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.contact-text {
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+}
+
+.contact-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contact-link {
+    color: #60a5fa;
+    font-size: 0.875rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #93c5fd;
+}
+
+.link-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.link-divider {
+    color: #475569;
+}
+
+/* Back to site */
+.back-to-site {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.back-link-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #94a3b8;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-link-main:hover {
+    color: white;
+}
+
+.back-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Pulse Animation for Success */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    }
+}
+
+.btn-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .contact-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .link-divider {
+        display: none;
+    }
+}
