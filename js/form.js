@@ -63,6 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     "✅ Obrigado! Recebemos sua solicitação e entraremos em contato em breve.",
                     "success",
                 );
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
                 form.reset();
             } else {
                 throw new Error(text);
