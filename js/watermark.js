@@ -12,7 +12,7 @@
             fixed inset-0
             flex items-center justify-center
             pointer-events-none
-            z-[9999]
+            z-0
         `;
 
         wrapper.innerHTML = `
