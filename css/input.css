@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family:
+        "Inter",
+        system-ui,
+        -apple-system,
+        sans-serif;
+}
+
+.content a {
+    @apply text-blue-500 underline;
+}
+
+.content a:hover {
+    @apply text-blue-700;
+}
+
+.warning {
+    @apply border-l-4 border-amber-400 pl-4;
+}

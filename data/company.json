@@ -1,123 +1,144 @@
 {
-  "site": {
-    "name": "Zaxen",
-    "tagline": "Integridade de Dados por Design"
-  },
-  
-  "hero": {
-    "title": "Integridade de Dados por Design",
-    "subtitle": "Consultoria em Governança de Dados e Conformidade Farmacêutica",
-    "cta": "Solicitar Consultoria",
-    "buttonText": "Começar Agora",
-    "backgroundImage": "/bg.png"
-  },
-
-  "about": {
-    "title": "Sobre Nós",
-    "text": "A Zaxen é uma consultoria especializada em integridade, governança e conformidade regulatória de dados para o setor farmacêutico. Apoiamos laboratórios e organizações de ciências da vida no design de ecossistemas de dados preparados para inspeção, alinhados com ALCOA+, GxP e expectativas regulatórias globais.",
-    "mission": "Ajudar organizações reguladas a estruturar, fortalecer e sustentar seus processos de governança e integridade de dados por meio de diagnósticos claros, processos estruturados, indicadores confiáveis e preparação sólida para auditorias regulatórias.",
-    "vision": "Ser referência técnica em governança e integridade de dados no ambiente GMP, apoiando laboratórios e organizações reguladas a tomarem decisões baseadas em dados confiáveis, rastreáveis e auditáveis.",
-    "values": [
-      "Integridade Técnica",
-      "Rastreabilidade e Clareza",
-      "Independência e Ética",
-      "Simplicidade Aplicável",
-      "Desenvolvimento de Pessoas",
-      "Foco em Resultado Sustentável"
-    ]
-  },
-
-  "services": {
-    "title": "Nossos Serviços",
-    "subtitle": "Soluções completas para integridade de dados e conformidade farmacêutica",
-    "items": [
-      {
-        "title": "Governança de Dados",
-        "description": "Estruturas e políticas estratégicas para garantir integridade, rastreabilidade e conformidade em todo o ciclo de vida dos dados.",
-        "icon": "shield"
-      },
-      {
-        "title": "Auditorias de Conformidade",
-        "description": "Análise de lacunas e auditorias independentes focadas em riscos de integridade de dados, sistemas computadorizados e processos laboratoriais.",
-        "icon": "clipboard"
-      },
-      {
-        "title": "Diagnóstico de Integridade",
-        "description": "Avaliação do estado atual de integridade e governança de dados GMP com base em ALCOA++ e ICH Q9.",
-        "icon": "search"
-      },
-      {
-        "title": "Indicadores & Suporte à Decisão",
-        "description": "Estruturação de indicadores confiáveis baseados em dados íntegros e governados para decisões gerenciais e de qualidade.",
-        "icon": "trending-up"
-      }
-    ]
-  },
-
-  "insights": {
-    "title": "Insights",
-    "subtitle": "Tendências e melhores práticas em integridade de dados farmacêuticos",
-    "items": [
-      {
-        "category": "Tendências do Setor",
-        "title": "O Futuro da Integridade de Dados na Indústria Farmacêutica",
-        "summary": "Como as agências regulatórias estão fortalecendo as expectativas em torno da governança e integridade de dados.",
-        "readTime": "5 min"
-      },
-      {
-        "category": "Melhores Práticas",
-        "title": "Construindo uma Cultura de Conformidade",
-        "summary": "Incorporando princípios de integridade de dados nos sistemas de qualidade e na cultura organizacional.",
-        "readTime": "7 min"
-      },
-      {
-        "category": "Metodologia",
-        "title": "Aplicando o ICH Q9 na Gestão de Riscos de Dados",
-        "summary": "Abordagem estruturada para avaliação de risco em processos de dados dentro de ambientes GMP.",
-        "readTime": "6 min"
-      }
-    ]
-  },
-
-  "sharedData": {
-    "contact": {
-      "email": "contato@zaxen.com.br",
-      "phone": "+55 (11) 91667-7423",
-      "address": "São Paulo, Brasil",
-      "availability": "Segunda–Sexta, 9h–18h"
+    "site": {
+        "name": "Zaxen",
+        "tagline": "Arquitetura de Estabilidade Organizacional"
     },
-    
-    "companyInfo": {
-      "name": "Zaxen Consultoria em Dados Farmacêuticos Ltda.",
-      "cnpj": "12.345.678/0001-90",
-      "address": "Rua Imaginária, 123 - São Paulo, SP - CEP: 01234-567"
+    "hero": {
+        "title": "Método Zaxen",
+        "subtitle": "Estruturamos sua organização para que decisões críticas sejam baseadas em dados íntegros, não em percepção.",
+        "cta": "Diagnosticar Estabilidade",
+        "buttonText": "Iniciar Diagnóstico",
+        "backgroundImage": "/bg.png"
     },
-    
-    "social": [
-      {"platform": "linkedin", "url": "https://linkedin.com/in/grezzi", "active": true},
-      {"platform": "x", "url": "#", "active": false},
-      {"platform": "instagram", "url": "#", "active": false},
-      {"platform": "youtube", "url": "#", "active": false}
-    ],
-
-    "meta": {
-      "lastUpdated": "24 de janeiro de 2026",
-      "version": "1.1"
+    "about": {
+        "title": "Arquitetura de Estabilidade",
+        "text": "A Zaxen é uma consultoria técnica que atua como estruturadora independente. Diferente de abordagens tradicionais que focam em ferramentas isoladas, aplicamos o **Método Zaxen**, uma arquitetura integrada que organiza a evolução da sua empresa a partir de sua base: a informação. Nossa tese é simples e estruturante: **dados íntegros sustentam governança; governança estruturada sustenta decisões confiáveis; decisões confiáveis permitem melhoria contínua sustentável**. Não entregamos opinião. Entregamos método, estrutura e previsibilidade decisória.",
+        "mission": "Estruturar organizações para operarem com dados rastreáveis e auditáveis, reduzindo riscos regulatórios, distorções decisórias e a dependência de controles informais, construindo uma base sólida para a evolução.",
+        "vision": "Ser a referência técnica em estabilidade informacional e governança estrutural, reconhecida por transformar a forma como organizações reguladas e orientadas a desempenho constroem sua maturidade.",
+        "values": [
+            "Estabilidade antes de Otimização",
+            "Evidência antes de Decisão",
+            "Governança antes de Escala",
+            "Independência Técnica",
+            "Rastreabilidade e Auditabilidade",
+            "Disciplina Metodológica",
+            "Evolução Contínua do Método"
+        ]
+    },
+    "method": {
+        "title": "O Método Zaxen",
+        "subtitle": "Uma arquitetura em camadas para construir maturidade organizacional de dentro para fora.",
+        "layers": [
+            {
+                "name": "1. Integridade Informacional",
+                "description": "A base de tudo. Garantimos que seus dados críticos sejam rastreáveis, consistentes e protegidos contra manipulação informal, estabelecendo a única base confiável para qualquer decisão."
+            },
+            {
+                "name": "2. Governança Estrutural",
+                "description": "Transformamos dados íntegros em estabilidade. Formalizamos papéis, responsabilidades e fluxos decisórios, criando previsibilidade e acabando com a ambiguidade organizacional."
+            },
+            {
+                "name": "3. Confiabilidade Analítica",
+                "description": "Construímos a camada de decisão. Com dados íntegros e governança estável, criamos indicadores (KPIs) que são a representação fiel da realidade, e não meras opiniões numéricas."
+            },
+            {
+                "name": "4. Evolução Sustentada",
+                "description": "A melhoria contínua como consequência. Com as camadas anteriores sólidas, a otimização de processos se torna natural, previsível e, acima de tudo, sustentável."
+            }
+        ]
+    },
+    "services": {
+        "title": "Aplicação do Método",
+        "subtitle": "Cada serviço é um módulo do nosso método, projetado para construir sua maturidade de forma lógica e estruturada.",
+        "items": [
+            {
+                "title": "Avaliação Técnica Estruturada",
+                "description": "Diagnóstico profundo para estabelecer a linha de base da sua organização. Mapeamos processos críticos, classificamos a maturidade (usando nossa Matriz de Maturidade) e identificamos os riscos informacionais que mais impactam sua estabilidade.",
+                "icon": "search"
+            },
+            {
+                "title": "Estruturação de Governança",
+                "description": "Formalizamos a estrutura de controle. Com base no diagnóstico, desenhamos e implementamos um modelo de governança com papéis (RACI), políticas e controles estruturais que garantem a estabilidade e a previsibilidade da operação.",
+                "icon": "clipboard"
+            },
+            {
+                "title": "Consolidação de Indicadores Confiáveis",
+                "description": "Criamos a camada analítica da sua empresa. Estruturamos um catálogo de KPIs com definição formal, fonte rastreável e processo de validação, transformando dados em evidência para a tomada de decisão.",
+                "icon": "barChart"
+            },
+            {
+                "title": "Otimização de Processos Orientada por Dados",
+                "description": "A evolução como consequência. Após garantir a estabilidade das camadas anteriores, aplicamos a melhoria contínua de forma estruturada, eliminando desperdícios e gargalos com base em evidências, não em achismos.",
+                "icon": "trendingUp"
+            }
+        ]
+    },
+    "insights": {
+        "title": "Fundamentos Estruturais",
+        "subtitle": "Os pilares que sustentam nossa arquitetura técnica e garantem que a evolução seja sólida e duradoura.",
+        "items": [
+            {
+                "category": "Framework Estrutural",
+                "title": "Estabilidade Informacional: A Infraestrutura Invisível",
+                "summary": "Como a rastreabilidade, o controle de alteração e a segregação de responsabilidade atuam como pilares para decisões confiáveis e previsíveis.",
+                "readTime": "6 min",
+                "link": "/insights/estabilidade-informacional"
+            },
+            {
+                "category": "Framework Estrutural",
+                "title": "Governança Estrutural: O Mecanismo de Previsibilidade",
+                "summary": "Por que a formalização de papéis e responsabilidades não é burocracia, mas sim o único caminho para reduzir a instabilidade sistêmica e o risco regulatório.",
+                "readTime": "5 min",
+                "link": "/insights/governanca-estrutural"
+            },
+            {
+                "category": "Modelo Analítico",
+                "title": "Confiabilidade Analítica: A Distorção Invisível",
+                "summary": "Como um KPI sem definição formal, fonte rastreável e validação periódica pode levar a decisões estratégicas catastróficas.",
+                "readTime": "7 min",
+                "link": "/insights/confiabilidade-analitica"
+            }
+        ]
+    },
+    "sharedData": {
+        "contact": {
+            "email": "contato@zaxen.com.br",
+            "phone": "+55 (11) 90000-0000",
+            "address": "São Paulo, SP - Brasil",
+            "availability": "Segunda a Sexta, 9h às 18h (BRT)"
+        },
+        "companyInfo": {
+            "name": "Zaxen Consultoria Técnica Ltda.",
+            "cnpj": "00.000.000/0001-00",
+            "address": "São Paulo - SP, Brasil"
+        },
+        "social": [
+            {
+                "platform": "linkedin",
+                "url": "https://linkedin.com/company/zaxen",
+                "active": true
+            },
+            { "platform": "x", "url": "#", "active": false },
+            { "platform": "instagram", "url": "#", "active": false },
+            { "platform": "youtube", "url": "#", "active": false }
+        ],
+        "meta": {
+            "lastUpdated": "22 de Fevereiro de 2026",
+            "version": "2.0"
+        }
+    },
+    "footer": {
+        "copyright": "© 2026 Zaxen Consultoria Técnica Ltda. Todos os direitos reservados.",
+        "tagline": "Arquitetura de Estabilidade para Decisões Confiáveis."
+    },
+    "navigation": {
+        "links": [
+            { "text": "Início", "href": "#home", "isActive": true },
+            { "text": "O Método", "href": "#method", "isActive": false },
+            { "text": "Serviços", "href": "#services", "isActive": false },
+            { "text": "Sobre", "href": "#about", "isActive": false },
+            { "text": "Fundamentos", "href": "#insights", "isActive": false },
+            { "text": "Contato", "href": "#contact", "isActive": false }
+        ]
     }
-  },
-
-  "footer": {
-    "copyright": "© 2026 Zaxen. Todos os direitos reservados.",
-    "tagline": "Integridade de Dados por Design"
-  },
-
-  "navigation": {
-    "links": [
-      {"text": "Início", "href": "#home", "isActive": true},
-      {"text": "Serviços", "href": "#services", "isActive": false},
-      {"text": "Sobre Nós", "href": "#about", "isActive": false},
-      {"text": "Insights", "href": "#insights", "isActive": false},
-      {"text": "Contato", "href": "#contact", "isActive": false}
-    ]
-  }
 }

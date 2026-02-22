@@ -34,7 +34,7 @@ function populatePage(data) {
     const hero = data.hero || null;
     const heroTitleEl = document.getElementById("hero-title");
     if (hero && heroTitleEl && hero.title) {
-        heroTitleEl.innerHTML = hero.title.replace(" ", "<br>");
+        heroTitleEl.innerHTML = hero.title.replace("<br>");
     }
     const heroSubtitleEl = document.getElementById("hero-subtitle");
     if (hero && heroSubtitleEl && hero.subtitle)
