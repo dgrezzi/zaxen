@@ -212,7 +212,7 @@ function populatePage(data) {
                 .map(
                     (social) =>
                         `<a href="${social.url}" target="_blank" rel="noopener noreferrer" 
-             class="text-slate-400 hover:text-blue-400 transition transform hover:scale-110">
+             class="text-slate-400 z-50 hover:text-blue-400 transition transform hover:scale-110">
             <span class="sr-only">${social.platform}</span>
             ${IconHelper.getSocialIcon(social.platform)}
           </a>`,
